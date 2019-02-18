@@ -7,6 +7,7 @@ import { DailyProgressReportComponent } from './daily-progress-report/daily-prog
 import { FormsModule } from '@angular/forms';
 import { BillCheckListComponent } from './bill-check-list/bill-check-list.component';
 import { LoginComponent } from './login/login.component';
+import { SupplierMasterComponent } from './supplier-master/supplier-master.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { LoginComponent } from './login/login.component';
     AppComponent,
     DailyProgressReportComponent,
     BillCheckListComponent,
-    LoginComponent
+    LoginComponent,
+    SupplierMasterComponent
   ],
   imports: [
     BrowserModule,

@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {LoginComponent} from './login/login.component'
 import {DailyProgressReportComponent} from './daily-progress-report/daily-progress-report.component';
-
+import {SupplierMasterComponent} from './supplier-master/supplier-master.component';
+  import { from } from 'rxjs';
 export const routes: Routes = [
   {
     path: '',
@@ -16,6 +17,10 @@ export const routes: Routes = [
   {
     path: 'report',
     component: DailyProgressReportComponent,   
+  },
+  {
+    path: 'Supplier',
+    component: SupplierMasterComponent,   
   }
 ];
 
