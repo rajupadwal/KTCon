@@ -1,12 +1,19 @@
 import { Component } from '@angular/core';
-import{Router} from '@angular/router';
+import { Router } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { AuthenticationService } from './authentication.service';
+import { UserInfo } from '../models/user.info.model';
+
 @Component({
   templateUrl: 'login.component.html'
 })
 export class LoginComponent {
-
-  constructor(private router:Router) { }
-
+  public userName: string="";
+  public userPassword: string="";
+  public errorMessage: string="";
+  userInfo: UserInfo = new UserInfo();
+  constructor(private router: Router,private authService: AuthenticationService) { }
+  
 
   public registerUser(): boolean {
     this.router.navigateByUrl('/register');
@@ -14,7 +21,23 @@ export class LoginComponent {
   }
 
   public login(): boolean {
-    this.router.navigateByUrl('/dashboard');
+    
+    this.userInfo.UserId = 0;
+    this.userInfo.Username = this.userName;
+    this.userInfo.Userpassword = this.userPassword;                       
+    this.userInfo.UserEmail  = '';
+    this.userInfo.UserType ="sample";
+    this.userInfo.CreateDate = null;
+    this.userInfo.UpdateDate   = null;
+
+    this.authService.login(this.userInfo).subscribe((user:any) => {
+      if (user && user.UserId > 0) {
+        this.router.navigateByUrl('/dashboard');
+      } else {
+        this.errorMessage ="UserName or Password is Incorrect ! Please try again"
+      }
+    });
+    
     return true;
   }
 }

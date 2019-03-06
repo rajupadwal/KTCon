@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
@@ -21,6 +22,8 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
+
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -28,7 +31,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    HttpClientModule,
+    FormsModule
   ],
   declarations: [
     AppComponent,

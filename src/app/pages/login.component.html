@@ -9,11 +9,14 @@
               <p class="text-muted">Sign In to your account</p>
               <div class="input-group mb-3">
                 <span class="input-group-addon"><i class="icon-user"></i></span>
-                <input type="text" class="form-control" placeholder="Username">
+                <input type="text" [(ngModel)]="userName" class="form-control" placeholder="Username">
               </div>
               <div class="input-group mb-4">
                 <span class="input-group-addon"><i class="icon-lock"></i></span>
-                <input type="password" class="form-control" placeholder="Password">
+                <input type="password" [(ngModel)]="userPassword" class="form-control" placeholder="Password">
+              </div>
+              <div *ngIf="errorMessage">
+                {{errorMessage}};
               </div>
               <div class="row">
                 <div class="col-6">
