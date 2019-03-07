@@ -9,11 +9,11 @@ import { UserInfo } from '../models/user.info.model';
 export class AuthenticationService {
   constructor(private http: HttpClient) { }
 
-  login(userInfo: UserInfo) {
+  login(userName:string,userPassword:string) {
     let httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    let body = JSON.stringify(userInfo);
+    let body = JSON.stringify({ Username: userName, Userpassword: userPassword });
     return this.http.post<UserInfo>(APP_CONSTANT.USER_APIS.LOGIN, body, httpOptions )
       .pipe(map((user:UserInfo) => {
         // login successful if there's a jwt token in the response

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
@@ -13,14 +14,15 @@ import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 
+
 // Routing Module
 import { AppRoutingModule } from './app.routing';
 
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
-
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ErrorDirective } from "./directives/error-directive";
 
 
 
@@ -42,7 +44,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     NAV_DROPDOWN_DIRECTIVES,
     BreadcrumbsComponent,
     SIDEBAR_TOGGLE_DIRECTIVES,
-    AsideToggleDirective
+    AsideToggleDirective,
+    ErrorDirective
    
   ],
   providers: [{
