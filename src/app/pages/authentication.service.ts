@@ -19,7 +19,7 @@ export class AuthenticationService {
         // login successful if there's a jwt token in the response
         if (user) {
           // store user details and jwt token in local storage to keep user logged in between page refreshes
-          localStorage.setItem('currentUser', JSON.stringify(user));
+          localStorage.setItem('Token', JSON.stringify(user.Token));
         }
         return user;
       }));

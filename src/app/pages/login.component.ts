@@ -26,9 +26,13 @@ export class LoginComponent {
       if (user && user.UserId > 0) {
         this.router.navigateByUrl('/dashboard');
       } else {
-        this.errorMessage ="UserName or Password is Incorrect ! Please try again"
+        this.errorMessage = "UserName or Password is Incorrect ! Please try again";
       }
-    });
+    },
+      (error) => {
+        this.errorMessage = "UserName or Password is Incorrect ! Please try again";
+      }
+    );
     
     return true;
   }

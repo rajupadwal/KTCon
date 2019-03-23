@@ -23,6 +23,8 @@ import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorDirective } from "./directives/error-directive";
+import { TokenInterceptor } from "./services/token.interceptor";
+import { AuthService } from "./services/auth.service";
 
 
 
@@ -46,12 +48,21 @@ import { ErrorDirective } from "./directives/error-directive";
     SIDEBAR_TOGGLE_DIRECTIVES,
     AsideToggleDirective,
     ErrorDirective
-   
+
   ],
-  providers: [{
+  providers: [
+    AuthService,
+    {
     provide: LocationStrategy,
-    useClass: HashLocationStrategy
-  }],
-  bootstrap: [ AppComponent ]
+    useClass: HashLocationStrategy,
+  },
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }
+
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
