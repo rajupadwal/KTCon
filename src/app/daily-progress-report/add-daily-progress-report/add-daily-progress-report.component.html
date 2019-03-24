@@ -1,0 +1,170 @@
+
+<form [formGroup]="addDPRForm" (ngSubmit)="onSubmit()">
+  <div class="col-sm-12">
+    <div class="card">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+
+              <div>
+                <span class="ui-float-label">
+                  <input id="DPRId" formControlName="DPRId" name="DPRId" class="form-control" disabled />
+                  <label for="float-input">DPR Number </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-autoComplete formControlName="ClientItemGroupDetailId" field="ItemName" [suggestions]="resultList"
+                                  (completeMethod)="Search('DPRClient',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
+                  <label for="float-input">Client Name </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-autoComplete formControlName="ProjectItemGroupDetailId" field="ItemName" [suggestions]="resultList"
+                                  (completeMethod)="Search('Project',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
+                  <label for="float-input">Project Name </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-autoComplete formControlName="DPRContractorItemGroupDetailId" field="ItemName" [suggestions]="resultList"
+                                  (completeMethod)="Search('DPRContractor',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
+                  <label for="float-input">Name of the Contractor </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-autoComplete formControlName="WorkNameItemGroupDetailId" field="ItemName" [suggestions]="resultList"
+                                  (completeMethod)="Search('Project',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
+                  <label for="float-input">Name of The Work </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-calendar formControlName="TargetDate" [showIcon]="true" showButtonBar="true"></p-calendar>
+                  <label for="float-input">Target Date </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-calendar formControlName="DPRDate" [disabled]="true" [showIcon]="true" showButtonBar="true"></p-calendar>
+                  <label for="float-input">Submit Date </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card-block">
+            <div class="form-group ">
+              <label for="textarea-input"><strong>Description:</strong></label>
+              <div>
+                <span class="ui-float-label">
+                  <textarea id="desciption" formControlName="DPRContractorItemGroupDetailId" name="description" rows="3" class="form-control"></textarea>
+                  <label for="float-input">Please Enter Todays Work Details </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-autoComplete formControlName="DPRAssociateNameItemGroupDetailId" field="ItemName" [suggestions]="resultList"
+                                  (completeMethod)="Search('DPRAssociateRepresentative',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
+                  <label for="float-input">DPR Client Associate Name </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card-block">
+            <div class="form-group">
+
+              <div>
+                <span class="ui-float-label padding-right20">
+                  <p-autoComplete formControlName="KTRepresentativeItemGroupDetailId" field="ItemName" [suggestions]="resultList"
+                                  (completeMethod)="Search('KTRepresntative',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
+                  <label for="float-input">KT Representative Associate Name </label>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+
+        </div>
+        <div class="col-sm-4">
+          <div class="input-group-btn" dropdown>
+            <button type="button" class="btn btn-outline-primary" (click)="redirectToAddcase()">&nbsp; Submit </button>
+            <button type="button" class="btn btn-outline-primary" (click)="redirectToAddcase()">&nbsp; Cancel </button>
+          </div>
+        </div>
+        <div class="col-sm-4">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</form>

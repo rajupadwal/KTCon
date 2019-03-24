@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 import { P404Component } from './404.component';
@@ -11,7 +11,7 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { AuthenticationService } from './authentication.service';
 
 @NgModule({
-  imports: [PagesRoutingModule, CommonModule, FormsModule],
+  imports: [PagesRoutingModule, CommonModule, FormsModule, ReactiveFormsModule],
   declarations: [
     P404Component,
     P500Component,

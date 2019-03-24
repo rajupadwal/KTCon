@@ -36,53 +36,60 @@ export const routes: Routes = [
         path: 'dashboard',
         loadChildren: './dashboard/dashboard.module#DashboardModule'
       },
-      {
-        path: 'cases',
-        loadChildren: './cases/cases.module#CasesModule'
-      },
-      {
-        path: 'team',
-        loadChildren: './team/team.module#TeamModule'
-      }, {
-        path: 'clients',
-        loadChildren: './clients/clients.module#ClientsModule'
-      }, {
-        path: 'calendar',
-        loadChildren: './calendar/calendar.module#CalendarModule'
-      }, {
-        path: 'todo',
-        loadChildren: './todo/todo.module#TodoModule'
-      }, {
-        path: 'documents',
-        loadChildren: './documents/documents.module#DocumentsModule'
-      }, {
-        path: 'invoices',
-        loadChildren: './invoices/invoices.module#InvoicesModule'
-      }, {
-        path: 'causelist',
-        loadChildren: './causelist/causelist.module#CauselistModule'
-      }, {
-        path: 'casediary',
-        loadChildren: './casediary/casediary.module#CaseDiaryModule'
-      }, 
-
+      
 
       {
-        path: 'components',
-        loadChildren: './components/components.module#ComponentsModule'
+        path: 'dailyprogressreport',
+        loadChildren: './daily-progress-report/daily.progress.report.module#DailyProgressReportModule'
       },
-      {
-        path: 'icons',
-        loadChildren: './icons/icons.module#IconsModule'
-      },
-      {
-        path: 'widgets',
-        loadChildren: './widgets/widgets.module#WidgetsModule'
-      },
-      {
-        path: 'charts',
-        loadChildren: './chartjs/chartjs.module#ChartJSModule'
-      }
+
+      //{
+      //  path: 'cases',
+      //  loadChildren: './cases/cases.module#CasesModule'
+      //},
+      //{
+      //  path: 'team',
+      //  loadChildren: './team/team.module#TeamModule'
+      //}, {
+      //  path: 'clients',
+      //  loadChildren: './clients/clients.module#ClientsModule'
+      //}, {
+      //  path: 'calendar',
+      //  loadChildren: './calendar/calendar.module#CalendarModule'
+      //}, {
+      //  path: 'todo',
+      //  loadChildren: './todo/todo.module#TodoModule'
+      //}, {
+      //  path: 'documents',
+      //  loadChildren: './documents/documents.module#DocumentsModule'
+      //}, {
+      //  path: 'invoices',
+      //  loadChildren: './invoices/invoices.module#InvoicesModule'
+      //}, {
+      //  path: 'causelist',
+      //  loadChildren: './causelist/causelist.module#CauselistModule'
+      //}, {
+      //  path: 'casediary',
+      //  loadChildren: './casediary/casediary.module#CaseDiaryModule'
+      //}, 
+
+
+      //{
+      //  path: 'components',
+      //  loadChildren: './components/components.module#ComponentsModule'
+      //},
+      //{
+      //  path: 'icons',
+      //  loadChildren: './icons/icons.module#IconsModule'
+      //},
+      //{
+      //  path: 'widgets',
+      //  loadChildren: './widgets/widgets.module#WidgetsModule'
+      //},
+      //{
+      //  path: 'charts',
+      //  loadChildren: './chartjs/chartjs.module#ChartJSModule'
+      //}
     ]
   },
   
