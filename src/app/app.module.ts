@@ -25,7 +25,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorDirective } from "./directives/error-directive";
 import { TokenInterceptor } from "./services/token.interceptor";
 import { AuthService } from "./services/auth.service";
-
+import { ValidationBorderModule } from './validation-border';
 
 
 @NgModule({
@@ -38,7 +38,17 @@ import { AuthService } from "./services/auth.service";
     NoopAnimationsModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ValidationBorderModule.forRoot({
+      borderStyle: 'solid',
+      borderWidth: '1px',
+      colors: {
+        VALID: 'green',
+        INVALID: 'red',
+        PENDING: 'yellow',
+        DISABLED: 'silver'
+      }
+    })
   ],
   declarations: [
     AppComponent,

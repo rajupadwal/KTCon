@@ -3,10 +3,12 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\models",
+    "\\src\\app\\cases\\addcase",
+    "\\src\\app\\daily-progress-report",
+    "\\src\\app\\daily-progress-report\\add-daily-progress-report",
     "\\src\\app\\pages",
     "\\src\\app\\services"
   ],
-  "SelectedNode": "\\src\\app\\pages\\login.component.ts",
+  "SelectedNode": "\\src\\app\\daily-progress-report\\dpr.service.ts",
   "PreviewInSolutionExplorer": false
 }

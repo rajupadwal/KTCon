@@ -5,7 +5,8 @@ export const APP_CONSTANT={
     LOGIN: API_URL + "user/login"
   },
   DPR_APIS: {
-    GETALL_ITEMGROUP_DETAILS: API_URL + "DPR/GetAllItemGroupDetails"
+    GETALL_ITEMGROUP_DETAILS: API_URL + "DPR/GetAllItemGroupDetails",
+     SAVE_DPR_DETAILS: API_URL + "DPR/SaveDPRDetails"
   }
 
 }

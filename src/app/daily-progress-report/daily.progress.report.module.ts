@@ -1,5 +1,7 @@
 import { NgModule, Input } from '@angular/core';
-import { FormsModule,ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { CommonModule } from '@angular/common';
+
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 import { AgGridModule } from 'ag-grid-angular';
@@ -11,7 +13,8 @@ import { AddDailyProgressReportComponent } from './add-daily-progress-report/add
 import { AutoCompleteModule } from 'primeng/autocomplete';
 import { CalendarModule } from 'primeng/calendar';
 
-import {DPRService} from './dpr.service';
+import { DPRService } from './dpr.service';
+import { ValidationBorderModule } from '../validation-border/validation-border.module';
 //import { AutoCompleteModule } from 'primeng';
 
 @NgModule({
@@ -22,7 +25,9 @@ import {DPRService} from './dpr.service';
     DailyProgressReportRouteModule,
     CalendarModule,
     AutoCompleteModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ValidationBorderModule,
+    CommonModule
 
   ],
   declarations: [DailyProgressReportComponent, AddDailyProgressReportComponent],
