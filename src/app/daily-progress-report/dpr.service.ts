@@ -31,12 +31,23 @@ export class DPRService {
     return this.itemGroupDetails;
   }
   saveDPRDetails(form) {
+    
     let httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
     return this.http.post<DPRModel>(APP_CONSTANT.DPR_APIS.SAVE_DPR_DETAILS, form, httpOptions)
   }
+
+
+  getAllDPRDetails() {
+    let httpOptions = {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    };
+    return this.http.get(APP_CONSTANT.DPR_APIS.GET_ALL_DPRS, httpOptions);
+  }
   
 }
+
+   
 
 

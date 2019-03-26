@@ -9,7 +9,7 @@
 
               <div>
                 <span class="ui-float-label">
-                  <input id="DPRId" formControlName="DPRId" name="DPRId" class="form-control" disabled />
+                  <input id="DPRId" formControlName="Dprid" name="DPRId" class="form-control" disabled />
                   <label for="float-input">DPR Number </label>
                 </span>
               </div>
@@ -51,7 +51,7 @@
 
               <div>
                 <span class="ui-float-label padding-right20">
-                  <p-autoComplete [forceSelection]="true" formControlName="DPRContractorItemGroupDetailId" field="ItemName" appValidationBorder [suggestions]="resultList"
+                  <p-autoComplete [forceSelection]="true" formControlName="DprcontractorItemGroupDetailId" field="ItemName" appValidationBorder [suggestions]="resultList"
                                   (completeMethod)="Search('DPRContractor',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
                   <label for="float-input">Name of the Contractor </label>
                 </span>
@@ -94,7 +94,7 @@
             <div class="form-group">
               <div>
                 <span class="ui-float-label padding-right20">
-                  <p-calendar formControlName="DPRDate" [disabled]="true" [showIcon]="true" appValidationBorder showButtonBar="true"></p-calendar>
+                  <p-calendar formControlName="Dprdate" [disabled]="true" [showIcon]="true" appValidationBorder showButtonBar="true"></p-calendar>
                   <label for="float-input">Submit Date </label>
                 </span>
               </div>
@@ -124,7 +124,7 @@
 
               <div>
                 <span class="ui-float-label padding-right20">
-                  <p-autoComplete [forceSelection]="true" formControlName="DPRAssociateNameItemGroupDetailId" field="ItemName" appValidationBorder [suggestions]="resultList"
+                  <p-autoComplete [forceSelection]="true" formControlName="DprassociateNameItemGroupDetailId" field="ItemName" appValidationBorder [suggestions]="resultList"
                                   (completeMethod)="Search('DPRAssociateRepresentative',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
                   <label for="float-input">DPR Client Associate Name </label>
                 </span>
@@ -138,7 +138,7 @@
 
               <div>
                 <span class="ui-float-label padding-right20">
-                  <p-autoComplete [forceSelection]="true" formControlName="KTRepresentativeItemGroupDetailId" field="ItemName" appValidationBorder [suggestions]="resultList"
+                  <p-autoComplete [forceSelection]="true" formControlName="KtrepresentativeItemGroupDetailId" field="ItemName" appValidationBorder [suggestions]="resultList"
                                   (completeMethod)="Search('KTRepresntative',$event)" [dropdown]="true" [minLength]="0"></p-autoComplete>
                   <label for="float-input">KT Representative Associate Name </label>
                 </span>

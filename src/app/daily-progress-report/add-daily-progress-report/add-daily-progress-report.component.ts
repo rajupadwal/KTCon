@@ -22,16 +22,16 @@ export class AddDailyProgressReportComponent implements OnInit {
     this.dprService.setDPRItemGroupDetails(); 
 
     this.addDPRForm = this.formBuilder.group({
-      DPRId: [{ value: '' , disabled: true }],
+      Dprid: [{ value: 0, disabled: true }],
       ClientItemGroupDetailId: [{}, Validators.required],
       ProjectItemGroupDetailId: [{}, Validators.required],
-      DPRContractorItemGroupDetailId: [{}, Validators.required],
+      DprcontractorItemGroupDetailId: [{}, Validators.required],
       WorkNameItemGroupDetailId: [{}, Validators.required],
       TargetDate: [dt, Validators.required],
-      DPRDate: [dt, Validators.required],
-      DPRAssociateNameItemGroupDetailId: [{}, Validators.required],
-      
-      KTRepresentativeItemGroupDetailId: [{}, Validators.required],
+      Dprdate: [dt, Validators.required],
+      DprassociateNameItemGroupDetailId: [{}, Validators.required],
+     
+      KtrepresentativeItemGroupDetailId: [{}, Validators.required],
       ReportText: ['', Validators.required],
     });
   }
